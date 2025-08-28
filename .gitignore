@@ -179,3 +179,34 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# SQL dump files
+*.sql
+*.db
+
+# VS Code workspace settings
+.vscode/
+
+# Project documentation and diagrams
+docs/*.png
+docs/*.jpg
+docs/*.svg
+docs/*.pdf
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# Logs
+*.log
+
+# Optional: Ignore model outputs or temporary results
+outputs/
+*.pkl
+*.h5
+*.joblib
+
+# Optional: Ignore Streamlit or Flask cache
+.streamlit/
