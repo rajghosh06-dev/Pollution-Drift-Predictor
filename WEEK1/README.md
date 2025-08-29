@@ -1,6 +1,4 @@
-## 📘 WEEK1/README.md (Updated)
-
-```markdown
+src:(WEEK1/README.md)
 # Week 1 – Pollution Drift Predictor (Environmental Monitoring & Pollution Control)
 
 ## 🌿 Project Theme
@@ -15,7 +13,7 @@ To explore and understand a real-world dataset related to air pollution, perform
 
 ## 📦 Dataset Used
 - **Source:** Kaggle – [Air Pollution Analysis and Prediction](https://www.kaggle.com/code/guidosalimbeni/air-pollution-analysis-and-prediction)
-- **File:** `data.csv`
+- **File:** [data.csv](WEEK1/data/data.csv)
 - **Size:** ~62 MB
 - **Description:** Historical daily ambient air quality data across multiple Indian cities, including pollutants like SO₂, NO₂, PM2.5, and environmental features such as date, location, and state.
 
@@ -45,19 +43,18 @@ Performed using `week1_analysis.ipynb`:
 WEEK1/
 ├── week1_analysis.ipynb       # Jupyter notebook with EDA
 ├── data.csv                   # Kaggle dataset used
-├── README.md                  # Summary of Week 1 work
+├── README.md                  # Summary of Week 1 work (You're here)
 ```
 
 ---
 
 ## 🗣️ Author
-**Rishit Raj Ghosh**  
+**Rishit Ghosh**  
 B.Tech in Computer Science and Engineering (AI/ML)  
-Geethanjali College of Engineering and Technology, Telangana
+Geethanjali College of Engineering and Technology, Telangana, India
 
 ---
 
 ## 📬 Contact
-📧 rishitghosh06h6@gmail.com  
+📧 rishitghosh06@gmail.com  
 🔗 [GitHub Profile](https://github.com/rajghosh06-dev)
-```
