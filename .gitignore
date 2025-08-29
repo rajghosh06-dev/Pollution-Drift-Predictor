@@ -195,7 +195,7 @@ docs/*.svg
 docs/*.pdf
 
 # Data files
-data/*.csv
+#data/*.csv (manually put this as an comment to allow sample_inputs.csv)
 data/*.xlsx
 data/*.json
 

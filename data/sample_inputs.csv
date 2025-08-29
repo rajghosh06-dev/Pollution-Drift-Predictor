@@ -1,0 +1,3 @@
+site_name,wind_speed,wind_direction,particulate_level,humidity,timestamp
+Site A,12.5,NW,85.2,60,2025-08-28 18:00
+Site B,8.3,SE,70.1,55,2025-08-28 19:00
