@@ -1,8 +1,3 @@
-Perfect, Rishit — let’s lock in a polished `README.md` for your **Week 2** folder of the *Pollution Drift Predictor* project. This version reflects your mentor’s guidance, your 80/20 training strategy, and your growing focus on visualization and model evaluation.
-
----
-
-```markdown
 # 🌍 Pollution Drift Predictor — Week 2
 
 ## 📌 Overview
@@ -101,4 +96,3 @@ Geethanjali College of Engineering and Technology, Cheeriyal, Telangana, India
 
 ## 📄 License
 MIT License
-```
