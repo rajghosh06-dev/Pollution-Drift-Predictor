@@ -78,6 +78,28 @@ Implemented using `matplotlib`, `seaborn`, and `plotly`:
 > *Note: These values are based on initial runs and may improve with tuning.*
 
 ---
+## 📊 Visualizations
+
+### 1. Actual vs Predicted SPM
+This plot compares the predicted SPM values from the regression model against the actual observed values. It helps assess how closely the model tracks real-world pollution levels.
+
+![Actual vs Predicted SPM](actual_vs_predicted.png)
+
+---
+
+### 2. Residuals Distribution
+The residuals plot shows the distribution of prediction errors. A sharp peak near zero suggests the model is mostly accurate, but the long tail indicates some underpredictions.
+
+![Residuals Distribution](residuals.png)
+
+---
+
+### 3. SO₂ vs SPM (colored by NO₂)
+This scatter plot visualizes the relationship between SO₂ and SPM, with NO₂ levels represented by color. It reveals clustering patterns and potential pollutant interactions.
+
+![SO2 vs SPM](scatter_so2_spm.png)
+
+---
 
 ## 🔮 Next Steps
 - Try alternative models (Random Forest, XGBoost)
