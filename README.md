@@ -22,7 +22,8 @@ This project predicts how particulate pollution spreads across locations based o
 - 🤖 Lightweight regression model for prediction  
 - 📊 Visualizations of pollution drift patterns  
 - 🧪 Jupyter notebook for testing and exploration  
-- 🧱 Clean folder structure for scalability and clarity  
+- 🧱 Streamlit interface for real-time prediction  
+- 🗂️ Week-wise folder structure for clarity and progression  
 
 ---
 
@@ -30,15 +31,30 @@ This project predicts how particulate pollution spreads across locations based o
 
 ```
 Pollution-Drift-Predictor/
-├── model_exploration.ipynb       # Main notebook for testing and analysis
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
-├── data/
-│   └── sample_inputs.csv         # Input dataset
-├── src/
-│   ├── drift_model.py            # Model training and prediction
-│   ├── data_ingestion.py         # Data loading and preprocessing
-│   └── visualizer.py             # Plotting functions
+├── WEEK1/                         # Dataset selection, problem definition, preprocessing
+│   ├── pollution_data.csv
+│   ├── preprocessing_notebook.ipynb
+│   └── README.md
+│
+├── WEEK2/                         # Model training, evaluation, and visualization
+│   ├── train_model.py
+│   ├── visualization.py
+│   ├── model_metrics.md
+│   ├── linear_regression_model.pkl
+│   └── README.md
+│
+├── WEEK3/                         # Streamlit deployment and prediction interface
+│   ├── streamlit_app.py
+│   ├── prediction.csv (optional)
+│   └── README.md
+│
+├── WEEK4/                         # Final presentation and documentation
+│   ├── PollutionDrift_PPT.pptx
+│   └── README.md
+│
+├── LICENSE                        # MIT License
+├── requirements.txt               # Python dependencies
+└── README.md                      # Project overview (this file)
 ```
 
 ---
@@ -46,19 +62,22 @@ Pollution-Drift-Predictor/
 ## 🧪 How It Works
 
 1. 📂 **Load Data**  
-   Pollution readings are loaded from a CSV file using `data_ingestion.py`.
+   Pollution readings are loaded from a CSV file and cleaned using Pandas.
 
 2. 🧹 **Preprocess Features**  
    Wind direction is converted into numeric angles to help the model interpret directional data.
 
 3. 🧠 **Train Model**  
-   A simple Linear Regression model is trained using wind speed, humidity, and wind angle.
+   A Linear Regression model is trained using wind speed, humidity, and wind angle.
 
 4. 📈 **Make Predictions**  
    The model forecasts particulate pollution levels for unseen data.
 
 5. 🎨 **Visualize Drift**  
-   Pollution drift is visualized using scatter plots colored by wind direction.
+   Pollution drift is visualized using scatter plots and bar charts.
+
+6. 🖥️ **Deploy Interface**  
+   A Streamlit app allows users to input SO₂ and NO₂ levels and receive real-time SPM predictions.
 
 ---
 
@@ -68,7 +87,8 @@ Pollution-Drift-Predictor/
 - 🧮 Pandas, NumPy  
 - 🤖 Scikit-learn  
 - 📊 Matplotlib, Seaborn  
-- 🌐 Plotly (optional for interactive plots)
+- 🌐 Streamlit  
+- 📈 Plotly (optional)
 
 ---
 
@@ -90,18 +110,19 @@ Pollution-Drift-Predictor/
    pip install -r requirements.txt
    ```
 
-4. 🚀 Run the notebook:
+4. 🚀 Run the Streamlit app:
    ```bash
-   jupyter notebook model_exploration.ipynb
+   streamlit run WEEK3/streamlit_app.py
    ```
 
 ---
 
 ## 📈 Sample Output
 
-- 📊 Predicted pollution levels based on wind and humidity  
-- 🗺️ Visual plots showing how pollution drifts across directions  
-- 📐 Model evaluation metrics (R² score, MSE)
+- 📊 Predicted SPM levels based on SO₂ and NO₂ inputs  
+- 🛑 Pollution risk interpretation (Safe, Moderate, Unhealthy, Hazardous)  
+- 📉 Bar chart comparing input pollutants vs predicted SPM  
+- 📥 Downloadable CSV of prediction results
 
 ---
 
@@ -109,7 +130,7 @@ Pollution-Drift-Predictor/
 
 **Rishit Ghosh**  
 🎓 B.Tech in Computer Science and Engineering (AI/ML)  
-🏫 Geethanjali College of Engineering and Technology, Telangana  
+🏫 Geethanjali College of Engineering and Technology, Telangana, Hyderabad, INDIA  
 🧠 Focused on modular design, environmental impact, and real-world applications of AI.
 
 ---
