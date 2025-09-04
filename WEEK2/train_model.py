@@ -4,6 +4,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 import os
 
+import joblib # For saving the model
+
+
 # Load dataset
 data_path = os.path.join("data", "data.csv")
 df = pd.read_csv(data_path, encoding='ISO-8859-1', low_memory=False)
@@ -41,3 +44,6 @@ with open("model_metrics.md", "w") as f:
     f.write(f"- **R² Score**: {r2:.4f}\n")
     f.write(f"- **Mean Absolute Error (MAE)**: {mae:.2f}\n")
     f.write(f"- **Mean Squared Error (MSE)**: {mse:.2f}\n")
+
+# Save the trained model
+joblib.dump(model, "linear_regression_model.pkl")
