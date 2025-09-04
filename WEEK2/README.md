@@ -110,9 +110,9 @@ This scatter plot visualizes the relationship between SO₂ and SPM, with NO₂ 
 ---
 
 ## 👨‍💻 Author
-Rishit Ghosh
+Rishit Ghosh  
 Geethanjali College of Engineering and Technology, Cheeriyal, Telangana, India
-- focused on modular design, reliable documentation, and technical clarity.
+- focused on modular design, reliable documentation, and technical clarity
 
 ---
 
