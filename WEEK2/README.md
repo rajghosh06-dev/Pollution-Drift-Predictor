@@ -25,17 +25,17 @@ Week 2 focuses on building a regression model to predict Suspended Particulate M
 
 ```
 WEEK2/
-├── train_model.py               # Model training, evaluation, and saving
-├── visualisation.py            # Diagnostic plots and saved charts
-├── week2_model_training.ipynb  # Final notebook submission (EDA + training)
-├── model_metrics.md            # Saved evaluation metrics (R², MAE, MSE)
-├── linear_regression_model.pkl # Trained model for deployment
-├── X_test.csv                  # Saved test features for reuse
-├── y_test_vs_pred.csv          # Actual vs predicted SPM values
-├── actual_vs_predicted.png     # Line plot of model performance
-├── residuals.png               # Histogram of prediction errors
-├── scatter_so2_spm.png         # SO₂ vs SPM scatter plot (colored by NO₂)
-└── README.md                   # This file
+├── train_model.py                # Model training, evaluation, and saving
+├── visualisation.py              # Diagnostic plots and saved charts
+├── week2_model_training.ipynb    # Final notebook submission (EDA + training)
+├── model_metrics.md              # Saved evaluation metrics (R², MAE, MSE)
+├── linear_regression_model.pkl   # Trained model for deployment
+├── X_test.csv                    # Saved test features for reuse
+├── y_test_vs_pred.csv            # Actual vs predicted SPM values
+├── actual_vs_predicted.png       # Line plot of model performance
+├── residuals.png                 # Histogram of prediction errors
+├── scatter_so2_spm.png           # SO₂ vs SPM scatter plot (colored by NO₂)
+└── README.md                     # (This file)
 ```
 
 ---
@@ -139,5 +139,3 @@ Visualizes pollutant interaction patterns and clustering behavior.
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
 See the `LICENSE` file for full details.
-
-Let me know if you want a matching version for `WEEK3` or a short summary for your LMS submission. This README now reflects your structure, polish, and professionalism.
