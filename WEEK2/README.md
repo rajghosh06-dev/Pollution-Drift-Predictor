@@ -1,37 +1,53 @@
-# 🌍 Pollution Drift Predictor — Week 2
+# 🌫️ Pollution Drift Predictor — Week 2
 
 ## 📌 Overview
-This module builds upon Week 1 by introducing a proper machine learning workflow to predict pollution drift patterns. It includes:
-- Data splitting (80% training, 20% testing)
+
+Week 2 focuses on building a regression model to predict Suspended Particulate Matter (SPM) using SO₂ and NO₂ concentrations. This module introduces:
+- Exploratory Data Analysis (EDA)
+- Feature selection and transformation
 - Model training and evaluation
-- Enhanced visualizations for drift behavior
-- Modular code structure for scalability
+- Visual diagnostics and saved outputs
+- Modular code structure for reuse and deployment
 
 ---
 
 ## 🧠 Objectives
-- Implement a regression model to predict pollution drift
+
+- Perform EDA and identify key pollutant features
+- Train a Linear Regression model using scikit-learn
 - Evaluate model performance using standard metrics
-- Visualize pollution intensity and drift direction
-- Refactor code for clarity and modularity
+- Visualize prediction accuracy and error distribution
+- Save model and outputs for Week 3 deployment
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-Week2/
-├── train_model.py         # Model training and evaluation logic
-├── visualization.py       # Graphs and plots for drift analysis
-├── model_metrics.md       # Metric interpretations and results
-├── README.md              # This file
+WEEK2/
+├── train_model.py               # Model training, evaluation, and saving
+├── visualisation.py            # Diagnostic plots and saved charts
+├── week2_model_training.ipynb  # Final notebook submission (EDA + training)
+├── model_metrics.md            # Saved evaluation metrics (R², MAE, MSE)
+├── linear_regression_model.pkl # Trained model for deployment
+├── X_test.csv                  # Saved test features for reuse
+├── y_test_vs_pred.csv          # Actual vs predicted SPM values
+├── actual_vs_predicted.png     # Line plot of model performance
+├── residuals.png               # Histogram of prediction errors
+├── scatter_so2_spm.png         # SO₂ vs SPM scatter plot (colored by NO₂)
+└── README.md                   # This file
 ```
+
+---
 
 ## 🧪 Model Training Strategy
 
-- **Data Split**: 80% training, 20% testing using `train_test_split`
-- **Model Used**: Linear Regression (initial baseline)
-- **Metrics Evaluated**:
+- **Data Source**: Cleaned from `WEEK1/data/data.csv`
+- **Features Used**: SO₂ and NO₂
+- **Target Variable**: SPM
+- **Split Ratio**: 80% training, 20% testing
+- **Model Used**: Linear Regression
+- **Evaluation Metrics**:
   - R² Score
   - Mean Absolute Error (MAE)
   - Mean Squared Error (MSE)
@@ -40,81 +56,88 @@ Week2/
 
 ## 📊 Visualizations
 
-Implemented using `matplotlib`, `seaborn`, and `plotly`:
-- Line plot: Predicted vs Actual pollution levels
-- Scatter plot: Drift direction vs pollution intensity
-- Heatmap: Regional pollution concentration
-- Residual plot: Error distribution
+Generated using `matplotlib` and `seaborn`:
+- 📈 Line plot: Actual vs Predicted SPM
+- 📉 Residuals histogram: Error distribution
+- 🎨 Scatter plot: SO₂ vs SPM (colored by NO₂)
 
 ---
 
 ## 🛠️ How to Run
 
-1. Ensure dependencies are installed:
+1. Install dependencies:
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn plotly
+   pip install pandas numpy matplotlib seaborn scikit-learn joblib
    ```
 
-2. Run training:
+2. Train and save model:
    ```bash
    python train_model.py
    ```
 
 3. Generate visualizations:
    ```bash
-   python visualization.py
+   python visualisation.py
    ```
 
 ---
 
 ## 📈 Results Summary
 
-| Metric | Value |
-|--------|-------|
-| R²     | 0.82  |
-| MAE    | 3.45  |
-| MSE    | 18.76 |
+| Metric | Value (Sample Run) |
+|--------|--------------------|
+| R²     | 0.82               |
+| MAE    | 3.45               |
+| MSE    | 18.76              |
 
-> *Note: These values are based on initial runs and may improve with tuning.*
+> *Note: These values may vary slightly depending on random split and data cleaning.*
 
 ---
-## 📊 Visualizations
+
+## 🖼️ Saved Visuals
 
 ### 1. Actual vs Predicted SPM
-This plot compares the predicted SPM values from the regression model against the actual observed values. It helps assess how closely the model tracks real-world pollution levels.
+Compares predicted SPM values against actual observations.
 
 ![Actual vs Predicted SPM](actual_vs_predicted.png)
 
 ---
 
 ### 2. Residuals Distribution
-The residuals plot shows the distribution of prediction errors. A sharp peak near zero suggests the model is mostly accurate, but the long tail indicates some underpredictions.
+Shows the spread of prediction errors. A tight peak near zero indicates good accuracy.
 
 ![Residuals Distribution](residuals.png)
 
 ---
 
 ### 3. SO₂ vs SPM (colored by NO₂)
-This scatter plot visualizes the relationship between SO₂ and SPM, with NO₂ levels represented by color. It reveals clustering patterns and potential pollutant interactions.
+Visualizes pollutant interaction patterns and clustering behavior.
 
 ![SO2 vs SPM](scatter_so2_spm.png)
 
 ---
 
-## 🔮 Next Steps
-- Try alternative models (Random Forest, XGBoost)
-- Add hyperparameter tuning
+## 🔮 Next Steps & Future Enhancements
+
+- Explore alternative models (Random Forest, XGBoost)
+- Add hyperparameter tuning and cross-validation
 - Integrate geospatial mapping for drift simulation
-- Save trained model for deployment
+- Deploy model via Streamlit in Week 3
 
 ---
 
 ## 👨‍💻 Author
-Rishit Ghosh  
-Geethanjali College of Engineering and Technology, Cheeriyal, Telangana, India
-- focused on modular design, reliable documentation, and technical clarity
+
+**Rishit Ghosh**  
+🎓 B.Tech in Computer Science and Engineering (AI/ML)  
+🏫 Geethanjali College of Engineering and Technology, Telangana  
+🧠 Focused on modular design, reliable documentation, and technical clarity
 
 ---
 
 ## 📄 License
-MIT License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+See the `LICENSE` file for full details.
+
+Let me know if you want a matching version for `WEEK3` or a short summary for your LMS submission. This README now reflects your structure, polish, and professionalism.
