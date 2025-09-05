@@ -1,28 +1,18 @@
+# VISUALIZATION & DIAGNOSTICS
+#(diagonistics only)
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-import os
+import joblib
 
-# Load dataset
-data_path = os.path.join("data", "data.csv")
-df = pd.read_csv(data_path, encoding='ISO-8859-1', low_memory=False)
+# Load saved model and test data
+model = joblib.load("linear_regression_model.pkl")
+X_test = pd.read_csv("X_test.csv")
+y_test_vs_pred = pd.read_csv("y_test_vs_pred.csv")
 
-# Clean and select relevant columns
-df = df[['so2', 'no2', 'spm']].dropna()
-
-# Features and target
-X = df[['so2', 'no2']]
-y = df['spm']
-
-# Train/test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Train model
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
+y_test = y_test_vs_pred["Actual"]
+y_pred = y_test_vs_pred["Predicted"]
 
 # Line plot: Actual vs Predicted
 plt.figure(figsize=(10, 5))
@@ -48,6 +38,8 @@ plt.savefig('residuals.png')
 plt.show()
 
 # Scatter plot: SO2 vs SPM with NO2 as hue
+df = pd.read_csv("data/data.csv", encoding='ISO-8859-1', low_memory=False)
+df = df[['so2', 'no2', 'spm']].dropna()
 sns.scatterplot(x=df['so2'], y=df['spm'], hue=df['no2'], palette='coolwarm')
 plt.title('SO2 vs SPM (colored by NO2)')
 plt.xlabel('SO2')
@@ -55,3 +47,4 @@ plt.ylabel('SPM')
 plt.tight_layout()
 plt.savefig('scatter_so2_spm.png')
 plt.show()
+
