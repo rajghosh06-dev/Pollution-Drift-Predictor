@@ -2,13 +2,13 @@
 
 ## 📌 Project Theme
 
-This project falls under the theme of **Environmental Monitoring & Pollution Control**, focusing on the prediction and analysis of airborne pollution drift using environmental data. Week 1 lays the foundation by exploring pollutant patterns across Indian cities.
+This project falls under the theme of **Environmental Monitoring & Pollution Control**, focusing on the prediction and analysis of airborne pollution drift using environmental data. Week 1 lays the foundation by exploring pollutant patterns across Indian cities and establishing a baseline model.
 
 ---
 
 ## 🎯 Objective
 
-To explore and understand a real-world dataset related to air pollution, perform detailed exploratory data analysis (EDA), and identify key features for building a predictive model in Week 2.
+To explore and understand a real-world dataset related to air pollution, perform detailed exploratory data analysis (EDA), and build an initial regression model to evaluate the predictive potential of available features.
 
 ---
 
@@ -23,7 +23,7 @@ To explore and understand a real-world dataset related to air pollution, perform
 
 ## 🧪 Exploratory Data Analysis (EDA)
 
-Performed using `week1_analysis.ipynb`:
+Performed using `week1_model_exploration.ipynb`:
 
 - 📥 Loaded dataset using `pandas`
 - 🔍 Explored structure using:
@@ -38,12 +38,29 @@ Performed using `week1_analysis.ipynb`:
 
 ---
 
+## 🧠 Initial Modeling
+
+A basic Linear Regression model was trained using SO₂ and NO₂ as input features to predict SPM. This served as a baseline for comparison with refined models in Week 2.
+
+### 📊 Evaluation Metrics
+
+- R² Score: **0.1055**
+- MAE: **110.01 µg/m³**
+- MSE: **21546.16**
+- Error Percentage: **48.46%**
+- Custom Accuracy (±10%): **12.96%**
+
+> These results indicate low predictive performance, reinforcing the need for deeper feature engineering and model refinement in Week 2.
+
+---
+
 ## 📈 Key Insights
 
 - SO₂ and NO₂ show strong correlation with SPM, making them ideal predictors
 - Pollution levels vary significantly across states and urban locations
 - Seasonal trends in SPM are visible through monthly aggregation
 - Data cleaning and visualization helped identify outliers and missing values
+- Initial modeling highlights the limitations of raw pollutant data without contextual enrichment
 
 ---
 
@@ -52,6 +69,7 @@ Performed using `week1_analysis.ipynb`:
 - Selected a domain-relevant dataset for pollution drift modeling
 - Cleaned and explored the data using standard EDA techniques
 - Identified SO₂ and NO₂ as key features for Week 2 modeling
+- Built a baseline regression model and evaluated its performance
 - Structured the notebook with markdown and visual clarity
 - Future-proofed time-series plots by updating deprecated resampling frequency
 
@@ -61,18 +79,21 @@ Performed using `week1_analysis.ipynb`:
 
 ```
 WEEK1/
-├── week1_analysis.ipynb       # Jupyter notebook with EDA and visualizations
-├── data.csv                   # Kaggle dataset used
-├── README.md                  # Summary of Week 1 work (You're here)
+├── notebooks/
+│   └── week1_model_exploration.ipynb   # EDA and baseline modeling
+├── Documentation Week1.docx            # Summary document
+├── Documentation Week1.pdf             # Exported version
+├── README.md                           # Summary of Week 1 work (You're here)
 ```
 
 ---
 
 ## 🔮 Future Work
 
-- Use SO₂ and NO₂ as input features for regression modeling in Week 2
-- Train and evaluate a pollution prediction model
-- Deploy the model via Streamlit in Week 3
+- Refine feature selection and data cleaning in Week 2
+- Train and evaluate improved regression models using SO₂ and NO₂
+- Log metrics and visualizations for reviewer clarity
+- Deploy the final model via Streamlit in Week 3
 - Explore geospatial mapping and seasonal drift simulation
 
 ---
