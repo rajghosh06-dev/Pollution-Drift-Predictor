@@ -1,10 +1,12 @@
-# 🌫️ Pollution Drift Predictor — Week 2
+### 🌫️ Pollution Drift Predictor — Week 2
+
+---
 
 ## 📌 Overview
 
-Week 2 focuses on building a regression model to predict Suspended Particulate Matter (SPM) using SO₂ and NO₂ concentrations. This module includes:
+Week 2 focuses on building a regression model to predict Suspended Particulate Matter (SPM) using pollutant concentrations, temporal features, and categorical metadata. This module includes:
 - Exploratory Data Analysis (EDA)
-- Feature selection and transformation
+- Feature engineering and transformation
 - Model training and evaluation
 - Visual diagnostics and saved outputs
 - Modular code structure for reuse and deployment
@@ -13,11 +15,12 @@ Week 2 focuses on building a regression model to predict Suspended Particulate M
 
 ## 🧠 Objectives
 
-- Perform EDA and identify key pollutant features
-- Train a Linear Regression model using scikit-learn
-- Evaluate model performance using standard metrics
-- Visualize prediction accuracy and error distribution
-- Save model and outputs for Week 3 deployment
+- Perform EDA and identify key pollutant and contextual features  
+- Engineer temporal and categorical variables for modeling  
+- Train a Random Forest Regressor using scikit-learn  
+- Evaluate model performance using standard and custom metrics  
+- Visualize prediction accuracy and error distribution  
+- Save model and outputs for Week 3 deployment  
 
 ---
 
@@ -33,8 +36,7 @@ WEEK2/
 │   └── visualization.py                 # Diagnostic plots and saved charts
 │
 ├── models/
-│   ├── linear_regression_model.pkl      # Trained model for deployment
-│   └── scaler.pkl                       # Feature scaler (if used)
+│   └── random_forest_model.pkl          # Trained model for deployment
 │
 ├── outputs/
 │   ├── actual_vs_predicted.png          # Line plot of model performance
@@ -55,16 +57,16 @@ WEEK2/
 
 ## 🧪 Model Training Strategy
 
-- **Data Source**: Cleaned from `main data/data.csv`
-- **Features Used**: SO₂ and NO₂
-- **Target Variable**: SPM
-- **Split Ratio**: 80% training, 20% testing
-- **Model Used**: Linear Regression
+- **Data Source**: Cleaned from `main data/data.csv`  
+- **Features Used**: SO₂, NO₂, RSPM (log-transformed), temporal features, and encoded categorical variables  
+- **Target Variable**: SPM  
+- **Split Ratio**: 80% training, 20% testing  
+- **Model Used**: Random Forest Regressor (tuned)  
 - **Evaluation Metrics**:
-  - R² Score
-  - Mean Absolute Error (MAE)
-  - Mean Squared Error (MSE)
-  - Error Percentage
+  - R² Score  
+  - Mean Absolute Error (MAE)  
+  - Mean Squared Error (MSE)  
+  - Error Percentage  
   - Custom Accuracy (±10%)
 
 ---
@@ -72,8 +74,8 @@ WEEK2/
 ## 📊 Visualizations
 
 Generated using `matplotlib` and `seaborn`:
-- 📈 Line plot: Actual vs Predicted SPM
-- 📉 Residuals histogram: Error distribution
+- 📈 Line plot: Actual vs Predicted SPM  
+- 📉 Residuals histogram: Error distribution  
 - 🎨 Scatter plot: SO₂ vs SPM (colored by NO₂)
 
 ---
@@ -99,13 +101,13 @@ Generated using `matplotlib` and `seaborn`:
 
 ## 📈 Results Summary
 
-| Metric             | Value (Sample Run) |
-|--------------------|--------------------|
-| R² Score           | 0.82               |
-| MAE                | 3.45 µg/m³         |
-| MSE                | 18.76              |
-| Error Percentage   | 48.46%             |
-| Custom Accuracy    | 46.21%             |
+| Metric             | Value (Final Run) |
+|--------------------|-------------------|
+| R² Score           | 0.7933            |
+| MAE                | 40.95 µg/m³       |
+| MSE                | 4788.45           |
+| Error Percentage   | 18.44%            |
+| Custom Accuracy    | 47.95%            |
 
 > *Note: These values may vary slightly depending on random split and data cleaning.*
 
@@ -113,21 +115,21 @@ Generated using `matplotlib` and `seaborn`:
 
 ## 🖼️ Saved Visuals
 
-### 1. Actual vs Predicted SPM
+### 1. Actual vs Predicted SPM  
 Compares predicted SPM values against actual observations.
 
 ![Actual vs Predicted SPM](outputs/actual_vs_predicted.png)
 
 ---
 
-### 2. Residuals Distribution
+### 2. Residuals Distribution  
 Shows the spread of prediction errors. A tight peak near zero indicates good accuracy.
 
 ![Residuals Distribution](outputs/residuals.png)
 
 ---
 
-### 3. SO₂ vs SPM (colored by NO₂)
+### 3. SO₂ vs SPM (colored by NO₂)  
 Visualizes pollutant interaction patterns and clustering behavior.
 
 ![SO2 vs SPM](outputs/scatter_so2_spm.png)
@@ -136,10 +138,10 @@ Visualizes pollutant interaction patterns and clustering behavior.
 
 ## 🔮 Next Steps & Future Enhancements
 
-- Explore alternative models (Random Forest, XGBoost)
-- Add hyperparameter tuning and cross-validation
-- Integrate geospatial mapping for drift simulation
-- Deploy model via Streamlit in Week 3
+- Compare performance with Gradient Boosting and XGBoost  
+- Add hyperparameter tuning and cross-validation  
+- Integrate geospatial mapping for drift simulation  
+- Deploy model via Streamlit in Week 3  
 
 ---
 
