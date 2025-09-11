@@ -202,8 +202,7 @@ data/*.json
 # Logs
 *.log
 
-# Optional: Ignore model outputs or temporary results
-outputs/
+# Optional: Ignore model temporary results
 *.pkl
 *.h5
 *.joblib
