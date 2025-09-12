@@ -64,6 +64,7 @@ Two models were trained to predict SPM using pollutant features:
 
 > Random Forest significantly outperformed the baseline, capturing nonlinear relationships and reducing prediction error.
 
+
 ---
 
 ## 📈 Key Insights
@@ -94,8 +95,10 @@ WEEK1/
 │   └── week1_model_exploration.ipynb   # EDA and modeling
 ├── Documentation Week1.docx            # Summary document
 ├── Documentation Week1.pdf             # Exported version
-├── README.md                           # Summary of Week 1 work (You're here)
+├── README.md                           # Summary & Brief of Week 1 work (You're here)
 ```
+
+> `⚠️ Model file (random_forest_model.pkl) not included due to size limits. To reproduce, run week1_model_exploration.ipynb or use the provided training script.`
 
 ---
 
