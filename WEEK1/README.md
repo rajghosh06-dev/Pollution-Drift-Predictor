@@ -91,14 +91,36 @@ Two models were trained to predict SPM using pollutant features:
 
 ```
 WEEK1/
+├── data/
+│   └── data.csv                         # Raw pollution dataset
+├── models/
+│   ├── linear_regression_model.pkl     # Serialized linear regression model ((Not Uploaded, ⚠️ exceeds GitHub size limit))
+│   └── random_forest_model.pkl         # Serialized random forest model (Not Uploaded, ⚠️ exceeds GitHub size limit)
 ├── notebooks/
-│   └── week1_model_exploration.ipynb   # EDA and modeling
-├── Documentation Week1.docx            # Summary document
-├── Documentation Week1.pdf             # Exported version
-├── README.md                           # Summary & Brief of Week 1 work (You're here)
+│   └── week1_model_exploration.ipynb   # EDA, feature selection, and model training
+├── outputs/
+│   ├── monthly_spm_trend.png           # Visualization of monthly SPM trends
+│   ├── top10_spm_locations.png         # Bar chart of top 10 SPM-heavy locations
+│   ├── Documentation Week1.docx        # Summary document (editable)
+│   └── Documentation Week1.doc         # Legacy version
+├── README.md                           # Summary & brief of Week 1 work (You're here)
 ```
 
-> `⚠️ Model file (random_forest_model.pkl) not included due to size limits. To reproduce, run week1_model_exploration.ipynb or use the provided training script.`
+> `⚠️ Model file (linear_regression_model.pkl), (random_forest_model.pkl) not included due to size limits. To reproduce, run week1_model_exploration.ipynb or use the provided training script.`
+
+---
+
+## 📈 Key Visualizations
+To support the insights drawn from EDA and modeling, the following plots were generated and saved in the outputs/ folder:
+
+### 🗓️ Monthly SPM Trend
+
+This time-series plot shows the monthly average SPM levels across all recorded locations. It reveals clear seasonal fluctuations, with noticeable peaks during winter months—likely due to increased particulate emissions and lower dispersion rates.
+
+![monthly_spm_trend](output/monthly_spm_trend.png)
+
+
+![top10_spm_locations](output/top10_spm_locations.png)
 
 ---
 
