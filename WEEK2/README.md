@@ -1,4 +1,6 @@
-### 🌫️ Pollution Drift Predictor — Week 2
+# 🌫️ Week2 - Pollution Drift Predictor (Model Training & Evaluation)  
+
+It focused on building a predictive model to estimate Suspended Particulate Matter (SPM) levels using SO₂ and NO₂ concentrations. The workflow included thorough exploratory data analysis, feature selection, and training a linear regression model with a 70:30 train-test split. Evaluation metrics such as R², MAE, and MSE were computed and logged for transparency. Visualizations and markdown summaries were integrated to ensure clarity and reviewer-friendliness, while the trained model was serialized for downstream deployment in Week 3.
 
 ---
 
@@ -36,7 +38,7 @@ WEEK2/
 │   └── visualization.py                 # Diagnostic plots and saved charts
 │
 ├── models/
-│   └── random_forest_model.pkl          # Trained model for deployment
+│   └── random_forest_model.pkl          # Trained model for deployment (not Uploaded)
 │
 ├── outputs/
 │   ├── actual_vs_predicted.png          # Line plot of model performance
@@ -52,6 +54,8 @@ WEEK2/
 ├── model_metrics.md                     # Saved evaluation metrics (R², MAE, MSE, Error %, Accuracy)
 └── README.md                            # (This file)
 ```
+
+> `⚠️ Model file (random_forest_model.pkl) not included due to size limits. To reproduce, run week2_model_training.ipynb or use the provided training script.`
 
 ---
 
