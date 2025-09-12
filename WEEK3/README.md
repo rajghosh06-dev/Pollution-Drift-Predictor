@@ -25,7 +25,7 @@ WEEK3/
 ├── README.md                      # This file
 ```
 
-> Note: The model is loaded from `../WEEK2/linear_regression_model.pkl`
+> Note: The model is loaded from `../WEEK2/forest_regressor_model.pkl`
 
 ---
 
