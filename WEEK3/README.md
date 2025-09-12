@@ -65,13 +65,15 @@ WEEK3/
 ---
 
 ## ℹ️ Model Details
+- **Algorithm:** Random Forest Regressor
 
-- **Algorithm**: Linear Regression  
-- **Trained on**: Historical air pollution data from Hyderabad  
-- **Features**: SO₂ and NO₂  
-- **Target**: SPM (Suspended Particulate Matter)  
+- **Trained on:** Historical air pollution data across Indian cities
 
-[Check WEEK-2](../WEEK2)
+- **Features:** SO₂, NO₂, RSPM, and one-hot encoded location/state/agency/type
+
+- **Target:** SPM (Suspended Particulate Matter)
+
+[ Check WEEK-2](../WEEK2)
 
 ---
 
