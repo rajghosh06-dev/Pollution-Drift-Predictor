@@ -1,5 +1,6 @@
-### Model Evaluation
-- R² Score: 0.1055
-- MAE: 110.01
-- MSE: 21546.16
-- Error Percentage: 48.46%
+
+## Week 2 Model Metrics
+
+- **R² Score**: 0.7933
+- **Mean Absolute Error (MAE)**: 40.9481
+- **Mean Squared Error (MSE)**: 4788.4482
