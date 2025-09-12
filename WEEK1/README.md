@@ -90,18 +90,51 @@ WEEK1/
 
 ---
 
-## 📈 Key Visualizations
-To support the insights drawn from EDA and modeling, the following plots were generated and saved in the outputs/ folder:
-
-### 🗓️ Monthly SPM Trend
-
-This time-series plot shows the monthly average SPM levels across all recorded locations. It reveals clear seasonal fluctuations, with noticeable peaks during winter months—likely due to increased particulate emissions and lower dispersion rates.
-
-![monthly spm trend](outputs/monthly_spm_trend.png)
+Absolutely, Rishit. Here's the updated markdown block for your `README.md` that includes both **embedded images** and **hyperlinked filenames**—so reviewers can either view the visuals inline or click to open them directly from the `outputs/` folder:
 
 ---
 
-![top10 spm locations](outputs/top10_spm_locations.png)
+## 📊 Visualizations
+
+### 🧪 Pollutant Distribution (Boxplot)  
+![Pollutant Distribution](outputs/pollutant_distribution_boxplot.png)  
+Boxplot showing the spread and outliers in SO₂, NO₂, and SPM concentrations across all locations.  
+[📎View File](outputs/pollutant_distribution_boxplot.png)  
+
+---
+
+### 📉 SPM vs Log-SPM Histogram  
+![SPM vs Log-SPM](outputs/spm_vs_log_spm_histogram.png)  
+Histograms comparing raw and log-transformed SPM values, highlighting reduced skewness after transformation.  
+[📎View File](outputs/spm_vs_log_spm_histogram.png)  
+
+---
+
+### 🗺️ Average Log-SPM by State  
+![Average Log-SPM by State](outputs/avg_log_spm_by_state.png)  
+Horizontal bar chart showing average pollution levels across Indian states, revealing regional disparities.  
+[📎View File](outputs/avg_log_spm_by_state.png)  
+
+---
+
+### 🏙️ Top 10 SPM-Heavy Locations  
+![Top 10 SPM Locations](outputs/top10_spm_locations.png)  
+Bar chart of the top 10 urban locations with highest average SPM, useful for targeted policy interventions.  
+[📎View File](outputs/top10_spm_locations.png)  
+
+---
+
+### 🔗 Correlation Heatmap  
+![Correlation Heatmap](outputs/correlation_heatmap.png)  
+Heatmap showing strong correlations between SO₂, NO₂, RSPM, and SPM, validating feature selection.  
+[📎View File](outputs/correlation_heatmap.png)  
+
+---
+
+### 📆 Monthly Average Log-SPM Trend  
+![Monthly SPM Trend](outputs/monthly_spm_trend.png)  
+Time-series plot revealing seasonal patterns in SPM levels, with peaks during colder months.  
+[📎View File](outputs/monthly_spm_trend.png)  
 
 ---
 
