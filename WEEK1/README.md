@@ -97,10 +97,11 @@ To support the insights drawn from EDA and modeling, the following plots were ge
 
 This time-series plot shows the monthly average SPM levels across all recorded locations. It reveals clear seasonal fluctuations, with noticeable peaks during winter months—likely due to increased particulate emissions and lower dispersion rates.
 
-![monthly_spm_trend](outputs/monthly_spm_trend.png)
+![monthly spm trend](outputs/monthly_spm_trend.png)
 
+---
 
-![top10_spm_locations](outputs/top10_spm_locations.png)
+![top10 spm locations](outputs/top10_spm_locations.png)
 
 ---
 
