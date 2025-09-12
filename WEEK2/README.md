@@ -1,6 +1,6 @@
 # 🌫️ Week2 - Pollution Drift Predictor (Model Training & Evaluation)  
 
-It focused on building a predictive model to estimate Suspended Particulate Matter (SPM) levels using SO₂ and NO₂ concentrations. The workflow included thorough exploratory data analysis, feature selection, and training a linear regression model with a 70:30 train-test split. Evaluation metrics such as R², MAE, and MSE were computed and logged for transparency. Visualizations and markdown summaries were integrated to ensure clarity and reviewer-friendliness, while the trained model was serialized for downstream deployment in Week 3.
+It focused on building predictive models to estimate Suspended Particulate Matter (SPM) levels using SO₂ and NO₂ concentrations. The workflow included exploratory data analysis, feature engineering, and training two models: a baseline Linear Regression and a more robust Random Forest Regressor. Both models were evaluated using R², MAE, and MSE, with metrics logged for transparency. The Random Forest model, serialized as `random_forest_model.pkl`, demonstrated improved accuracy and was selected for deployment in [WEEK 3](../WEEK3). Visualizations and markdown summaries were integrated to ensure clarity and reviewer-friendliness throughout the notebook.
 
 ---
 
