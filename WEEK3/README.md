@@ -20,12 +20,15 @@ This week focuses on deploying the trained Linear Regression model from Week 2 u
 
 ```
 WEEK3/
-├── streamlit_app.py               # Streamlit interface script
-├── prediction.csv (optional)     # Sample output file
-├── README.md                      # This file
+├── apps/
+│   ├── app_flask.py              # Flask-based web interface
+│   └── app_streamlit.py          # Streamlit-based web interface
+├── notebooks/
+│   └── week3_streamlit_app.ipynb # Notebook version of Streamlit app
+├── README.md                     # Summary & instructions for Week 3
 ```
 
-> Note: The model is loaded from `../WEEK2/linear_regression_model.pkl`
+> Note: The model is loaded from `../WEEK2/models/random_forest_model.pkl`. This `random_forest_model.pkl` was not uploaded into the GITHUB.
 
 ---
 
@@ -63,6 +66,8 @@ WEEK3/
 - **Trained on**: Historical air pollution data from Hyderabad
 - **Features**: SO₂ and NO₂
 - **Target**: SPM (Suspended Particulate Matter)
+  
+[Check WEEK-2](../WEEK2)
 
 ---
 
