@@ -67,26 +67,6 @@ Two models were trained to predict SPM using pollutant features:
 
 ---
 
-## 📈 Key Insights
-
-- SO₂, NO₂, and RSPM show strong correlation with SPM, validating their use as predictors
-- Pollution levels vary significantly across states and urban locations
-- Seasonal trends in SPM are visible through monthly aggregation
-- Log transformation improved model stability and reduced skewness
-- Random Forest captured complex patterns missed by linear regression
-
----
-
-## 🛠️ Work Done
-
-- Cleaned and explored the dataset using standard EDA techniques
-- Applied log transformation to reduce skewness in pollutant distributions
-- Built and evaluated both linear and nonlinear regression models
-- Visualized feature relationships, temporal trends, and model performance
-- Structured the notebook with markdown summaries and reviewer-friendly plots
-
----
-
 ## 📁 Folder Structure
 
 ```
@@ -117,10 +97,30 @@ To support the insights drawn from EDA and modeling, the following plots were ge
 
 This time-series plot shows the monthly average SPM levels across all recorded locations. It reveals clear seasonal fluctuations, with noticeable peaks during winter months—likely due to increased particulate emissions and lower dispersion rates.
 
-![monthly_spm_trend](output/monthly_spm_trend.png)
+![monthly_spm_trend](outputs/monthly_spm_trend.png)
 
 
-![top10_spm_locations](output/top10_spm_locations.png)
+![top10_spm_locations](outputs/top10_spm_locations.png)
+
+---
+
+## 📈 Key Insights
+
+- SO₂, NO₂, and RSPM show strong correlation with SPM, validating their use as predictors
+- Pollution levels vary significantly across states and urban locations
+- Seasonal trends in SPM are visible through monthly aggregation
+- Log transformation improved model stability and reduced skewness
+- Random Forest captured complex patterns missed by linear regression
+
+---
+
+## 🛠️ Work Done
+
+- Cleaned and explored the dataset using standard EDA techniques
+- Applied log transformation to reduce skewness in pollutant distributions
+- Built and evaluated both linear and nonlinear regression models
+- Visualized feature relationships, temporal trends, and model performance
+- Structured the notebook with markdown summaries and reviewer-friendly plots
 
 ---
 
