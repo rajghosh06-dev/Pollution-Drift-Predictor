@@ -6,13 +6,13 @@ This week focuses on deploying the trained Linear Regression model from Week 2 u
 
 ## 🚀 Features
 
-- **Interactive UI** built with Streamlit
-- **Dropdown inputs** for SO₂ and NO₂ concentrations
-- **Real-time prediction** of SPM using the trained model
-- **Pollution risk interpretation** (Safe, Moderate, Unhealthy, Hazardous)
-- **Bar chart visualization** of input pollutants vs predicted SPM
-- **Downloadable CSV** of prediction results
-- **Expandable model info section** for transparency
+- **Interactive UI** built with Streamlit  
+- **Dropdown inputs** for SO₂ and NO₂ concentrations  
+- **Real-time prediction** of SPM using the trained model  
+- **Pollution risk interpretation** (Safe, Moderate, Unhealthy, Hazardous)  
+- **Bar chart visualization** of input pollutants vs predicted SPM  
+- **Downloadable CSV** of prediction results  
+- **Expandable model info section** for transparency  
 
 ---
 
@@ -25,10 +25,14 @@ WEEK3/
 │   └── app_streamlit.py          # Streamlit-based web interface
 ├── notebooks/
 │   └── week3_streamlit_app.ipynb # Notebook version of Streamlit app
-├── README.md                     # Summary & instructions for Week 3
+├── outputs/                      # Visual output samples for README or documentation
+│   ├── output_SAFE.png           # Screenshot showing Safe pollution level
+│   ├── output_MODERATE.png       # Screenshot showing Moderate pollution level
+│   └── output_HAZARDOUS.png      # Screenshot showing Hazardous pollution level
+├── README.md                     # Summary, screenshots & instructions for Week 3
 ```
 
-> Note: The model is loaded from `../WEEK2/models/random_forest_model.pkl`. This `random_forest_model.pkl` was not uploaded into the GITHUB.
+> Note: The model is loaded from `../WEEK2/models/random_forest_model.pkl`. This file is required but not included in the GitHub repository.
 
 ---
 
@@ -41,7 +45,7 @@ WEEK3/
 
 2. Run the Streamlit app:
    ```bash
-   streamlit run streamlit_app.py
+   streamlit run apps/app_streamlit.py
    ```
 
 3. Open your browser at:
@@ -62,21 +66,28 @@ WEEK3/
 
 ## ℹ️ Model Details
 
-- **Algorithm**: Linear Regression
-- **Trained on**: Historical air pollution data from Hyderabad
-- **Features**: SO₂ and NO₂
-- **Target**: SPM (Suspended Particulate Matter)
-  
+- **Algorithm**: Linear Regression  
+- **Trained on**: Historical air pollution data from Hyderabad  
+- **Features**: SO₂ and NO₂  
+- **Target**: SPM (Suspended Particulate Matter)  
+
 [Check WEEK-2](../WEEK2)
 
 ---
 
-## 📸 Screenshots
+## 📤 Output Samples
+Below are screenshots of the app interface showing different pollution risk levels based on user inputs:
 
-Include screenshots of:
-- The Streamlit interface with inputs
-- Prediction result and chart
-- Download button and model info section
+### 🟢 Safe
+![Safe Output](outputs/output_SAFE.png)
+
+---
+### 🟡 Moderate
+![Moderate Output](outputs/output_MODERATE.png)
+
+---
+### 🔴 Hazardous
+![Hazardous Output](outputs/output_HAZARDOUS.png)
 
 ---
 
@@ -86,3 +97,4 @@ Built by **Rishit Ghosh**
 SkillFuture AIML Internship – Week 3 Submission  
 GitHub Repo: [Pollution-Drift-Predictor](https://github.com/rajghosh06-dev/Pollution-Drift-Predictor)
 
+---
