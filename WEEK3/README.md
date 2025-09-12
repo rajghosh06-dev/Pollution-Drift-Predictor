@@ -28,7 +28,7 @@ WEEK3/
 ├── README.md                     # Summary & instructions for Week 3
 ```
 
-> Note: The model is loaded from `../WEEK2/models/forest_regressor_model.pkl`. This `forest_regressor_model.pkl` was not uploaded into the GITHUB.
+> Note: The model is loaded from `../WEEK2/models/random_forest_model.pkl`. This `random_forest_model.pkl` was not uploaded into the GITHUB.
 
 ---
 
